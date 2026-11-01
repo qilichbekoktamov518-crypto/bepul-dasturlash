@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMS tasdiqlash | Bepul Dasturlash</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/verify.css">
+</head>
+
+<body>
+
+    <main class="verify-page">
+
+        <div class="verify-card">
+
+            <div class="logo">
+                Bepul <span>Dasturlash</span>
+            </div>
+
+            <h1>SMS kodini kiriting</h1>
+
+            <p class="verify-text">
+                Telefon raqamingizga yuborilgan 6 xonali kodni kiriting.
+            </p>
+
+            <form id="verifyForm">
+
+                <div class="otp-container">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                </div>
+
+                <button type="submit">
+                    Tasdiqlash →
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+            <div class="resend">
+                Kod kelmadimi?
+                <button type="button" id="resendBtn">
+                    Qayta yuborish
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="../js/verify.js"></script>
+
+</body>
+</html>

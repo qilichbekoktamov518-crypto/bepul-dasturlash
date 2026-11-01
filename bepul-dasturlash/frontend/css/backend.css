@@ -1,0 +1,350 @@
+/* =========================
+   BACKEND HERO
+========================= */
+
+.backend-hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 6%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.backend-hero::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: rgba(108, 99, 255, 0.15);
+    filter: blur(100px);
+    border-radius: 50%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backend-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+}
+
+.backend-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid rgba(108, 99, 255, 0.4);
+    border-radius: 30px;
+    color: #a8a2ff;
+    background: rgba(108, 99, 255, 0.08);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.backend-hero h1 {
+    font-size: clamp(45px, 7vw, 82px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.backend-hero h1 span {
+    display: block;
+    background: linear-gradient(
+        90deg,
+        #6c63ff,
+        #a8a2ff,
+        #6c63ff
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: backendGradient 5s linear infinite;
+}
+
+@keyframes backendGradient {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+.backend-hero p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #999;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.backend-primary-btn {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.backend-primary-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.3);
+}
+
+
+/* =========================
+   ROADMAP
+========================= */
+
+.backend-roadmap {
+    padding: 90px 6%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title > span {
+    color: #8d87ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.section-title p {
+    color: #777;
+}
+
+.roadmap-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.roadmap-item {
+    min-width: 110px;
+    text-align: center;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.roadmap-item:hover {
+    color: white;
+    transform: translateY(-6px);
+}
+
+.roadmap-number {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(108, 99, 255, 0.1);
+    border: 1px solid rgba(108, 99, 255, 0.35);
+    color: #9b95ff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.roadmap-arrow {
+    color: #555;
+    font-size: 20px;
+}
+
+
+/* =========================
+   BACKEND COURSES
+========================= */
+
+.backend-courses {
+    padding: 90px 6%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.backend-course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.backend-course-card {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: 0.4s;
+}
+
+.backend-course-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(108, 99, 255, 0.45);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.backend-course-image {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    background: rgba(108, 99, 255, 0.06);
+    transition: 0.4s;
+}
+
+.backend-course-card:hover .backend-course-image {
+    transform: scale(1.04);
+}
+
+.backend-course-image span {
+    transition: 0.4s;
+}
+
+.backend-course-card:hover .backend-course-image span {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.backend-course-content {
+    padding: 25px;
+}
+
+.course-number {
+    color: #6c63ff;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.backend-course-content h3 {
+    margin: 8px 0 10px;
+    font-size: 25px;
+    color: white;
+}
+
+.backend-course-content p {
+    color: #888;
+    line-height: 1.6;
+    min-height: 52px;
+}
+
+.backend-course-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 18px;
+    border-radius: 10px;
+    background: rgba(108, 99, 255, 0.1);
+    border: 1px solid rgba(108, 99, 255, 0.2);
+    color: #aaa5ff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.backend-course-btn:hover {
+    background: #6c63ff;
+    color: white;
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   DIFFERENT COURSE ICONS
+========================= */
+
+.python {
+    background: rgba(55, 118, 171, 0.08);
+}
+
+.postgresql {
+    background: rgba(51, 103, 145, 0.08);
+}
+
+.node {
+    background: rgba(83, 158, 67, 0.08);
+}
+
+.django {
+    background: rgba(9, 55, 44, 0.12);
+}
+
+.git {
+    background: rgba(240, 80, 50, 0.08);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .backend-course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .backend-hero {
+        min-height: 65vh;
+        padding: 80px 20px;
+    }
+
+    .backend-hero h1 {
+        font-size: 48px;
+    }
+
+    .backend-hero p {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .roadmap-arrow {
+        display: none;
+    }
+
+    .roadmap-line {
+        gap: 25px;
+    }
+
+    .backend-course-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .backend-hero h1 {
+        font-size: 40px;
+    }
+
+    .backend-course-image {
+        height: 160px;
+    }
+
+}

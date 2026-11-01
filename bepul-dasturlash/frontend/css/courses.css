@@ -1,0 +1,562 @@
+.course-header {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 20px 50px;
+}
+
+.back-button {
+    display: inline-block;
+
+    margin-bottom: 40px;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    color: white;
+
+    transform: translateX(-5px);
+}
+
+.course-header-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+.course-header h1 {
+    font-size: clamp(40px, 6vw, 65px);
+
+    margin: 10px 0 20px;
+}
+
+.course-header-content > div:first-child > p:last-child {
+    max-width: 600px;
+
+    color: #aaa;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+}
+
+
+/* PROGRESS */
+
+.progress-box {
+    min-width: 280px;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.progress-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.progress-top strong {
+    color: #6c63ff;
+}
+
+.progress-bar {
+    height: 8px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6c63ff,
+            #a855f7
+        );
+}
+
+.progress-box small {
+    color: #777;
+}
+
+
+/* LESSON AREA */
+
+.lesson-area {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 20px 100px;
+}
+
+.lesson-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+.lesson-top h2 {
+    font-size: 38px;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    width: 280px;
+
+    padding: 14px 45px 14px 18px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    border-color: #6c63ff;
+
+    box-shadow:
+        0 0 20px
+        rgba(108, 99, 255, 0.15);
+}
+
+.search-box span {
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* LESSON CARD */
+
+.lessons-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.lesson-card {
+    display: grid;
+
+    grid-template-columns:
+        70px 1fr auto;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    transition: 0.35s;
+}
+
+.lesson-card:hover {
+    transform: translateX(8px);
+
+    border-color:
+        rgba(108, 99, 255, 0.45);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.25);
+}
+
+.lesson-number {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(108, 99, 255, 0.12);
+
+    color: #6c63ff;
+
+    font-weight: 700;
+}
+
+.lesson-info > span {
+    color: #777;
+
+    font-size: 12px;
+}
+
+.lesson-info h3 {
+    margin: 5px 0;
+
+    font-size: 20px;
+}
+
+.lesson-info p {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+.lesson-action {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.lesson-time {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.lesson-action a {
+    color: #6c63ff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.lesson-action a:hover {
+    transform: translateX(5px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .course-header-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .progress-box {
+        width: 100%;
+    }
+
+    .lesson-top {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .lesson-card {
+        grid-template-columns:
+            55px 1fr;
+    }
+
+    .lesson-action {
+        grid-column: 2;
+    }
+
+    .lesson-number {
+        width: 45px;
+        height: 45px;
+    }
+
+    .lesson-info h3 {
+        font-size: 17px;
+    }
+
+    .lesson-info p {
+        line-height: 1.5;
+    }
+
+}
+
+/* =========================
+   COURSE HEADER
+========================= */
+
+.course-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 6% 70px;
+}
+
+.course-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Orqaga qaytish */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 35px;
+
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.back-link:hover {
+    color: #fff;
+    transform: translateX(-4px);
+}
+
+/* Header */
+
+/* =========================
+   DARSLAR BO'LIMI
+========================= */
+
+.lessons-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 50px auto 0;
+    padding: 0 20px;
+}
+
+.lessons-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.section-label {
+    display: block;
+    color: #8b83ff;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.lessons-top h2 {
+    margin: 0;
+    color: white;
+    font-size: 28px;
+}
+
+.search-box input {
+    width: 250px;
+    padding: 12px 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    background: #151927;
+    color: white;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #6c63ff;
+}
+
+/* Telefon uchun */
+@media (max-width: 700px) {
+
+    .lessons-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-box,
+    .search-box input {
+        width: 100%;
+    }
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.lesson-search-box {
+    margin-top: 28px;
+}
+
+.lesson-search-box input {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 15px 18px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(255,255,255,0.04);
+
+    color: #fff;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.lesson-search-box input::placeholder {
+    color: #666;
+}
+
+.lesson-search-box input:focus {
+    border-color: #6c63ff;
+
+    box-shadow:
+        0 0 0 3px rgba(108,99,255,0.12);
+}
+
+/* =========================
+   LESSON SECTION
+========================= */
+
+.lessons-section {
+    margin-top: 45px;
+}
+
+.lessons-section-title {
+    margin-bottom: 20px;
+
+    color: #fff;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.lesson-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (max-width: 700px) {
+
+    .course-page {
+        padding: 80px 20px 50px;
+    }
+
+    .course-header {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .course-header h1 {
+        font-size: 28px;
+    }
+
+    .course-header p {
+        font-size: 14px;
+    }
+
+    .lesson-search-box input {
+        max-width: 100%;
+    }
+}
+
+/* ===============================
+   COMPLETED LESSON
+================================ */
+
+.lesson-card.completed {
+    border-color: rgba(46, 204, 113, 0.3);
+}
+
+.lesson-card.completed .lesson-number {
+    color: #5ee58a;
+}
+
+.lesson-card.completed .lesson-arrow {
+    color: #5ee58a;
+}
+
+.lesson-card.completed .lesson-info p {
+    color: #5ee58a;
+}

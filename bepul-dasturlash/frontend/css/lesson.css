@@ -1,0 +1,497 @@
+/* =========================
+   LESSON PAGE
+========================= */
+
+.lesson-page {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 60px 0 100px;
+}
+
+
+/* BACK */
+
+.lesson-back {
+    display: inline-block;
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 35px;
+    transition: 0.3s;
+}
+
+.lesson-back:hover {
+    color: white;
+    transform: translateX(-5px);
+}
+
+
+/* HEADER */
+
+.lesson-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.lesson-badge {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 30px;
+    background: rgba(108, 99, 255, 0.1);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    color: #aaa5ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.lesson-header h1 {
+    margin: 18px 0 12px;
+    font-size: clamp(35px, 5vw, 58px);
+}
+
+.lesson-header p {
+    color: #888;
+    font-size: 17px;
+}
+
+
+/* VIDEO */
+
+.video-section {
+    margin-bottom: 45px;
+}
+
+.video-placeholder {
+    min-height: 500px;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(108, 99, 255, 0.12),
+            transparent 50%
+        ),
+        rgba(255,255,255,0.025);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    transition: 0.4s;
+}
+
+.video-placeholder:hover {
+    border-color: rgba(108,99,255,0.4);
+    transform: translateY(-4px);
+}
+
+.video-icon {
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #6c63ff;
+    color: white;
+
+    font-size: 28px;
+
+    padding-left: 5px;
+
+    box-shadow:
+        0 15px 40px rgba(108,99,255,0.35);
+
+    margin-bottom: 25px;
+
+    transition: 0.3s;
+}
+
+.video-placeholder:hover .video-icon {
+    transform: scale(1.08);
+}
+
+.video-placeholder h2 {
+    margin-bottom: 10px;
+}
+
+.video-placeholder p {
+    color: #777;
+}
+
+.video-placeholder > span {
+    margin-top: 20px;
+    color: #625bff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+
+/* CONTENT */
+
+.lesson-content {
+    display: grid;
+    gap: 20px;
+}
+
+.content-card {
+    display: flex;
+    gap: 22px;
+    padding: 28px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    background: rgba(255,255,255,0.025);
+
+    transition: 0.35s;
+}
+
+.content-card:hover {
+    transform: translateX(7px);
+    border-color: rgba(108,99,255,0.35);
+    background: rgba(108,99,255,0.04);
+}
+
+.content-icon {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(108,99,255,0.1);
+
+    font-size: 25px;
+}
+
+.content-card h2 {
+    margin-bottom: 10px;
+}
+
+.content-card p {
+    color: #888;
+    line-height: 1.7;
+}
+
+
+/* BUTTON */
+
+.lesson-action {
+    margin-top: 18px;
+
+    padding: 10px 17px;
+
+    border: 1px solid rgba(108,99,255,0.25);
+    border-radius: 9px;
+
+    background: rgba(108,99,255,0.08);
+
+    color: #aaa5ff;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.lesson-action:hover {
+    background: #6c63ff;
+    color: white;
+    transform: translateX(5px);
+}
+
+
+/* CHALLENGE */
+
+.challenge-card {
+    border-color: rgba(255, 190, 70, 0.15);
+}
+
+.challenge-card:hover {
+    border-color: rgba(255, 190, 70, 0.4);
+}
+
+
+/* NAVIGATION */
+
+.lesson-navigation {
+    margin-top: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.lesson-nav-button,
+.complete-button {
+    padding: 13px 20px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.lesson-nav-button {
+    color: #aaa;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.lesson-nav-button:hover {
+    color: white;
+    border-color: #6c63ff;
+    transform: translateY(-3px);
+}
+
+.complete-button {
+    border: none;
+    background: #6c63ff;
+    color: white;
+    cursor: pointer;
+}
+
+.complete-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(108,99,255,0.3);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .lesson-page {
+        width: 92%;
+        padding-top: 40px;
+    }
+
+    .video-placeholder {
+        min-height: 350px;
+    }
+
+    .content-card {
+        flex-direction: column;
+    }
+
+    .lesson-navigation {
+        flex-direction: column;
+    }
+
+    .lesson-nav-button,
+    .complete-button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+.video-container {
+    width: 100%;
+    aspect-ratio: 2.05 / 1;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0f111a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.lesson-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 45px auto 0;
+    padding: 0 20px;
+}
+
+.lesson-card {
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 24px;
+}
+
+.content-label {
+    display: inline-block;
+    color: #8b83ff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.lesson-card h2 {
+    color: white;
+    margin: 0 0 18px;
+    font-size: 27px;
+}
+
+.lesson-card p {
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.note-box,
+.question-box,
+.practice-box,
+.test-question {
+    background: #111522;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.note-box h3,
+.question-box h3 {
+    color: white;
+    margin-top: 0;
+}
+
+.note-box pre {
+    overflow-x: auto;
+    margin: 15px 0 0;
+    padding: 18px;
+    border-radius: 10px;
+    background: #080b12;
+    color: #d7d9ff;
+}
+
+.question-box p {
+    margin-bottom: 0;
+}
+
+.practice-box strong {
+    color: white;
+    font-size: 17px;
+}
+
+.practice-box p {
+    margin-bottom: 0;
+}
+
+.test-question label {
+    display: block;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.03);
+    color: #bbb;
+    cursor: pointer;
+}
+
+.test-question label:hover {
+    background: rgba(108,99,255,0.12);
+    color: white;
+}
+
+.boss-card {
+    border-color: rgba(108,99,255,0.3);
+}
+
+.boss-card li {
+    color: #bbb;
+    margin: 10px 0;
+}
+
+.lesson-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 35px 0 60px;
+}
+
+.lesson-navigation a,
+.complete-btn {
+    padding: 13px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: #151927;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background: #6c63ff;
+    border: none;
+    color: white;
+    font-weight: 700;
+}
+
+.lesson-navigation a:hover {
+    color: white;
+    border-color: #6c63ff;
+}
+
+@media (max-width: 700px) {
+
+    .lesson-content {
+        padding: 0 15px;
+    }
+
+    .lesson-card {
+        padding: 22px;
+    }
+
+    .lesson-navigation {
+        flex-direction: column;
+    }
+
+    .lesson-navigation a,
+    .complete-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+#checkTestBtn {
+    margin-top: 25px;
+}
+
+#testResult {
+    margin-top: 20px;
+    padding: 15px 18px;
+    border-radius: 10px;
+    display: none;
+    font-weight: 600;
+}
+
+#testResult.success {
+    display: block;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    color: #5ee58a;
+}
+
+#testResult.warning {
+    display: block;
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    color: #ffd45c;
+}
